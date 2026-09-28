@@ -1,0 +1,35 @@
+kullanici_adi="Aheyak"
+sifre=str(1234)
+kalan_hak=3
+while True:
+  dogru_ad=input("Kullanıcı Adınızı Giriniz:")
+  dogru_sifre=str(input("Şifrenizi Giriniz:"))
+  
+  if kullanici_adi==dogru_ad and sifre==dogru_sifre:
+    print("Doğru Kullanıcı Adı ve Şifre")
+    while True:
+      print("Lütfen Yapmak İstediğiniz İşlemi Seçiniz")
+      print("1- Bütçe Yönetimi")
+      print("2- Reklam Yönetimi")
+      print("3- Çalışan Yönetimi")
+      secim= int(input("Seçiminizi Yapın:"))
+      if secim==1:
+        print("Bütçe Yönetimi Ekranına Yönlendiriliyor")
+        break
+      elif secim==2:
+        print("Reklam Yönetimi Ekranına Yönlendiriliyor")
+        break
+      elif secim==3:
+        print("Çalışan Yönetimi Ekranına Yönlendiriliyor")
+        break
+      else:
+        print("Geçersiz İşlem") 
+    break
+  else:
+    print("Hatalı Şifre veya Kullanıcı Adı")
+    kalan_hak -= 1
+    print(f"Kalan Hakkınız: {kalan_hak}")
+    if kalan_hak <= 0:
+      print("Hakkınız Kalmadı Sistem Bloke Ediliyor")
+      break
+    
